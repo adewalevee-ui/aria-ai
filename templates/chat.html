@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aria AI — Chat</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+  <link rel="stylesheet" href="[cdnjs.cloudflare.com](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css)"/>
+  <link rel="stylesheet" href="[cdnjs.cloudflare.com](https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css)"/>
+  <script src="[cdnjs.cloudflare.com](https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js)"></script>
+</head>
+<body class="chat-body">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <i class="fa-solid fa-microchip"></i>
+        <span>Aria<span class="neon-accent">AI</span></span>
+      </div>
+      <button class="new-chat-btn" id="newChatBtn">
+        <i class="fa-solid fa-pen-to-square"></i>
+        New Chat
+      </button>
+    </div>
+    <div class="sidebar-body">
+      <p class="sidebar-note">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        No history saved — privacy by design.
+      </p>
+    </div>
+    <div class="sidebar-footer">
+      <a href="/" class="sidebar-link">
+        <i class="fa-solid fa-house"></i>
+        Home
+      </a>
+      <div class="sidebar-link">
+        <i class="fa-solid fa-circle-dot pulse-dot"></i>
+        Aria is online
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Chat Area -->
+  <main class="chat-main">
+
+    <!-- Top Bar -->
+    <header class="chat-header">
+      <button class="sidebar-toggle" id="sidebarToggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="chat-header-title">
+        <i class="fa-solid fa-microchip"></i>
+        Aria AI
+        <span class="model-badge">
+          <i class="fa-solid fa-circle-dot pulse-dot"></i>
+          Mistral 7B
+        </span>
+      </div>
+      <div class="header-actions">
+        <button class="icon-btn" title="Clear Chat" id="clearBtn">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Messages Area -->
+    <div class="messages-area" id="messagesArea">
+
+      <!-- Welcome Screen (shown when empty) -->
+      <div class="welcome-screen" id="welcomeScreen">
+        <div class="welcome-orb">
+          <div class="orb-sm">
+            <div class="orb-ring-sm r1"></div>
+            <div class="orb-ring-sm r2"></div>
+            <div class="orb-core-sm">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+          </div>
+        </div>
+        <h2 class="welcome-title">
+          Hello, I'm <span class="neon-text">Aria</span>
+        </h2>
+        <p class="welcome-typing" id="welcomeTyping"></p>
+        <div class="suggestion-grid">
+          <button class="suggestion-card" data-msg="Explain quantum computing in simple terms">
+            <i class="fa-solid fa-atom"></i>
+            <span>Explain quantum computing</span>
+          </button>
+          <button class="suggestion-card" data-msg="Write a Python web scraper for me">
+            <i class="fa-solid fa-code"></i>
+            <span>Write a Python script</span>
+          </button>
+          <button class="suggestion-card" data-msg="What are the latest trends in AI?">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Latest AI trends</span>
+          </button>
+          <button class="suggestion-card" data-msg="Help me plan my project timeline">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Plan my project</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Input Area -->
+    <div class="input-area">
+      <div class="input-wrapper">
+        <button class="input-icon-btn" title="Attach">
+          <i class="fa-solid fa-paperclip"></i>
+        </button>
+        <textarea
+          id="userInput"
+          class="chat-input"
+          placeholder="Message Aria..."
+          rows="1"
+        ></textarea>
+        <button class="send-btn" id="sendBtn" disabled>
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+      <p class="input-disclaimer">
+        <i class="fa-solid fa-shield-halved"></i>
+        Aria AI — No data stored. Built for the future.
+      </p>
+    </div>
+
+  </main>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

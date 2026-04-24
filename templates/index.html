@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aria AI — The Future of Intelligence</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="landing-body">
+
+  <!-- 3D Canvas Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Neon Grid Overlay -->
+  <div class="grid-overlay"></div>
+
+  <!-- NAV -->
+  <nav class="landing-nav">
+    <div class="nav-logo">
+      <i class="fa-solid fa-microchip"></i>
+      <span>Aria<span class="neon-accent">AI</span></span>
+    </div>
+    <div class="nav-links">
+      <a href="#features"><i class="fa-solid fa-bolt"></i> Features</a>
+      <a href="#about"><i class="fa-solid fa-circle-info"></i> About</a>
+      <a href="/chat" class="nav-cta">
+        <i class="fa-solid fa-rocket"></i> Launch Aria
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">
+      <i class="fa-solid fa-circle-dot pulse-dot"></i>
+      Aria is online and ready
+    </div>
+    <h1 class="hero-title">
+      Meet <span class="glitch" data-text="Aria">Aria</span>
+      <br/>
+      <span class="hero-sub-title">The AI from the Future</span>
+    </h1>
+    <p class="hero-desc">
+      Hyper-intelligent. Blazing fast. Futuristic design.<br/>
+      Aria AI is your next-generation conversational intelligence.
+    </p>
+    <div class="hero-actions">
+      <a href="/chat" class="btn-primary">
+        <i class="fa-solid fa-comments"></i>
+        Start Chatting
+      </a>
+      <a href="#features" class="btn-ghost">
+        <i class="fa-solid fa-chevron-down"></i>
+        Explore Features
+      </a>
+    </div>
+
+    <!-- Floating 3D Orb -->
+    <div class="orb-container">
+      <div class="orb">
+        <div class="orb-ring ring-1"></div>
+        <div class="orb-ring ring-2"></div>
+        <div class="orb-ring ring-3"></div>
+        <div class="orb-core">
+          <i class="fa-solid fa-brain"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <h2 class="section-title">
+      <i class="fa-solid fa-star-of-life"></i>
+      Core Capabilities
+    </h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fa-solid fa-bolt-lightning"></i>
+        </div>
+        <h3>Lightning Fast</h3>
+        <p>Instant responses powered by cutting-edge LLM models via OpenRouter.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h3>Privacy First</h3>
+        <p>No chat history saved. Every conversation is completely ephemeral and secure.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </div>
+        <h3>Smart Context</h3>
+        <p>Understands nuance, tone, and intent with deeply contextual AI reasoning.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fa-solid fa-infinity"></i>
+        </div>
+        <h3>Always Available</h3>
+        <p>24/7 intelligent assistance. No downtime, no limits, no boundaries.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <h3>Code & Analyse</h3>
+        <p>Write code, debug errors, and analyse data with AI-powered precision.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fa-solid fa-globe"></i>
+        </div>
+        <h3>Multi-domain</h3>
+        <p>From science to business, art to tech — Aria knows it all.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-text">
+        <h2>
+          <i class="fa-solid fa-atom"></i>
+          What is Aria AI?
+        </h2>
+        <p>
+          Aria AI is a next-generation conversational AI built for speed, intelligence, and style.
+          Powered by OpenRouter and advanced language models, Aria delivers human-level understanding
+          wrapped in a stunning futuristic interface.
+        </p>
+        <p>
+          Built as a showcase of modern AI capabilities — Aria is fast, sharp, and always online.
+        </p>
+        <a href="/chat" class="btn-primary">
+          <i class="fa-solid fa-arrow-right"></i>
+          Talk to Aria Now
+        </a>
+      </div>
+      <div class="about-visual">
+        <div class="hologram-card">
+          <div class="holo-lines"></div>
+          <div class="holo-content">
+            <i class="fa-solid fa-microchip holo-icon"></i>
+            <div class="holo-stats">
+              <div class="stat">
+                <span class="stat-num" data-target="99">0</span><span>%</span>
+                <small>Uptime</small>
+              </div>
+              <div class="stat">
+                <span class="stat-num" data-target="500">0</span><span>ms</span>
+                <small>Avg. Response</small>
+              </div>
+              <div class="stat">
+                <span class="stat-num" data-target="7">0</span><span>B+</span>
+                <small>Parameters</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="landing-footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <i class="fa-solid fa-microchip"></i>
+        Aria<span class="neon-accent">AI</span>
+      </div>
+      <p>Built for the future. Ready for today.</p>
+      <div class="footer-links">
+        <a href="/chat"><i class="fa-solid fa-comments"></i> Chat</a>
+        <a href="#features"><i class="fa-solid fa-bolt"></i> Features</a>
+        <a href="#about"><i class="fa-solid fa-circle-info"></i> About</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
